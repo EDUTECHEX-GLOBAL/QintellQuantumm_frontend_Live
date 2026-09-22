@@ -1,0 +1,259 @@
+.footer {
+  font-family: "D-DIN Pro", "D-DIN", "DIN Alternate", Arial, Verdana, sans-serif;
+  margin-top: 56px;
+  padding: 58px 64px 38px;
+  background: #f4f7f8;
+  display: grid;
+  gap: 46px;
+  grid-template-columns: 1.3fr repeat(3, minmax(120px, 1fr));
+}
+
+.footerLine {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--line);
+}
+
+.footerLine span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-4px);
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.footer .logo {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.footer .logo span {
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.footer .logo small {
+  position: static;
+  padding: 0 0 3px;
+  color: #879bb8;
+  font-size: 9px;
+  letter-spacing: 6px;
+}
+
+.footer .logoImg {
+  height: 38px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* ============ Brand column ============ */
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.footerBrand p {
+  margin: 22px 0 0;
+  max-width: 260px;
+  color: #263546;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 13px;
+  margin-top: 24px;
+}
+
+.footerSocial a {
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============ Link columns ============ */
+.footerGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.footer h3 {
+  display: block;
+  margin: 0 0 18px;
+  color: #8ca1ad;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.footerGroup a:not(.button) {
+  color: #263546;
+  font-size: 15px;
+}
+
+.footerGroup p {
+  margin: 0;
+  color: #263546;
+  font-size: 15px;
+}
+
+.footerGroup a.mail {
+  padding-bottom: 9px;
+  border-bottom: 2px solid #b6c6cf;
+  font-size: 15px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.footer .button {
+  width: 100%;
+  max-width: 300px;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+/* ============ Legal row ============ */
+.footerLegal {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: #9baab4;
+  font-size: 14px;
+}
+
+.footerLegal span:first-child {
+  margin-right: auto;
+}
+
+/* ============ Large desktop (>=1600px) ============ */
+@media (min-width: 1600px) {
+  .footer {
+    padding: 80px 88px 56px;
+    gap: 64px;
+  }
+}
+
+/* ============ Small desktop / laptop (<=1400px) ============ */
+@media (max-width: 1400px) {
+  .footer {
+    padding: 56px 48px 44px;
+  }
+}
+
+/* ============ Tablet (<=1100px) ============ */
+@media (max-width: 1100px) {
+  .footer {
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+    gap: 36px;
+    padding: 48px 48px 32px;
+  }
+}
+
+/* ============ Small tablet (<=760px) ============ */
+@media (max-width: 760px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+    padding: 44px 24px 32px;
+  }
+
+  .footerBrand {
+    grid-column: 1 / -1;
+  }
+
+  .footerBrand p {
+    max-width: 100%;
+  }
+
+  .footerPartners {
+    grid-column: 1 / -1;
+  }
+
+  .footer h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .footerGroup a:not(.button) {
+    font-size: 14px;
+  }
+
+  .footerGroup p,
+  .footerGroup a.mail {
+    font-size: 14px;
+  }
+
+  .footer .button {
+    max-width: 100%;
+  }
+
+  .footer .logoImg {
+    height: 31px;
+  }
+
+  .footerLegal {
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    padding-top: 20px;
+    font-size: 13px;
+  }
+
+  .footerLegal span:first-child {
+    width: 100%;
+  }
+}
+
+/* ============ Small mobile (<=480px) ============ */
+@media (max-width: 480px) {
+  .footer {
+    padding: 56px 18px 28px;
+    gap: 24px 16px;
+  }
+
+  .footer .logo span {
+    font-size: 19px;
+  }
+
+  .footer .logo small {
+    font-size: 8px;
+    letter-spacing: 4px;
+  }
+
+  .footer .logoImg {
+    height: 27px;
+  }
+
+  .footerLegal {
+    font-size: 12px;
+    gap: 8px 16px;
+  }
+}

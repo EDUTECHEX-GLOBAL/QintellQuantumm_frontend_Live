@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+  --ink: #071321;
+  --muted: #5f7284;
+  --line: #dce6ed;
+  --faint: #f5f8f9;
+  --blue: #075cf8;
+  --teal: #24cbd2;
+  --navy: #020719;
+  --max: 1440px;
+
+  /* =======================================================
+     SHARED SIDE PADDING SCALE
+     Used by every section's inner content (Header navbar,
+     Hero copy, Purpose, Stack, Roadmap, NextEra) so text
+     always starts at the same x-position, at every screen
+     size. Keep these in sync across components — do not
+     hardcode side padding values in individual files.
+     ======================================================= */
+  --side-desktop: 64px;
+  --side-tablet: 30px;
+  --side-mobile: 16px;
+  --side-mobile-sm: 14px;
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+
+  width: 100%;
+  max-width: 100%;
+
+  background: #fff;
+  color: var(--ink);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   SHARED SECTION WRAPPER
+   ========================================================= */
+
+.sectionWrap {
+  width: min(
+    calc(100% - 56px),
+    var(--max)
+  );
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   SHARED EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--blue);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::after {
+  content: "";
+
+  display: block;
+
+  width: 42px;
+  height: 2px;
+
+  margin-top: 10px;
+
+  background: currentColor;
+}
+
+.eyebrow.muted {
+  color: #8ca0aa;
+  font-size: 10px;
+}
+
+.eyebrow.teal {
+  color: #188f98;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   SHARED BUTTON
+   ========================================================= */
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  min-height: 42px;
+
+  padding: 13px 26px;
+
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.button.solid {
+  background: var(--blue);
+  color: #fff;
+}
+
+.button.outline {
+  background: transparent;
+  color: var(--blue);
+}
+
+
+/* =========================================================
+   SHARED LOGO
+   ========================================================= */
+
+.logo {
+  display: inline-flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  color: var(--blue);
+
+  line-height: 0.9;
+}
+
+.logo span {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  letter-spacing: 7px;
+}
+
+.logo small {
+  padding-left: 7px;
+
+  font-size: 13px;
+
+  letter-spacing: 19px;
+}
+
+.logoLight {
+  color: var(--ink);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1180px) {
+
+  .sectionWrap {
+    width: min(
+      calc(100% - 48px),
+      var(--max)
+    );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  html,
+  body,
+  #root,
+  main {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: hidden;
+  }
+
+  .sectionWrap {
+    width: calc(100% - 28px);
+    max-width: none;
+
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .button {
+    font-size: 12px;
+  }
+
+  .logo span {
+    font-size: 30px;
+  }
+
+  .logo small {
+    font-size: 12px;
+    letter-spacing: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .sectionWrap {
+    width: calc(100% - 24px);
+
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+}

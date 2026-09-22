@@ -1,0 +1,489 @@
+/* =========================================================
+   CONTACT — INTRO + FORM
+   ========================================================= */
+
+.contactSection {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: minmax(360px, 460px) 1fr;
+  align-items: start;
+  gap: 56px;
+
+  padding: 64px 0 80px;
+}
+
+.contactGlow {
+  position: absolute;
+  z-index: -1;
+  top: -60px;
+  left: -120px;
+
+  width: 480px;
+  height: 480px;
+
+  background: radial-gradient(circle, rgba(7, 92, 248, 0.10) 0%, rgba(36, 203, 210, 0.06) 45%, transparent 70%);
+  pointer-events: none;
+}
+
+.contactIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-top: 6px;
+}
+
+.eyebrowDot {
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  margin-bottom: 1px;
+
+  border-radius: 50%;
+  background: var(--teal);
+
+  vertical-align: middle;
+}
+
+.contactHeading {
+  margin: 0 0 18px;
+
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+}
+
+.ghostLine {
+  display: block;
+  position: relative;
+
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--blue);
+}
+
+.contactLead {
+  max-width: 42ch;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contactDivider {
+  height: 1px;
+  max-width: 42ch;
+  margin: 32px 0 26px;
+
+  background: var(--line);
+}
+
+.directContact .directEmail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 8px 0 6px;
+
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 700;
+
+  transition: color 0.15s ease;
+}
+
+.directContact .directEmail:hover {
+  color: var(--blue);
+}
+
+.directContact .directEmail span {
+  color: var(--blue);
+  font-size: 15px;
+}
+
+.directNote {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* =========================================================
+   INQUIRY CARD
+   ========================================================= */
+
+.inquiryCard {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  padding: 30px 32px 28px;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: #fff;
+  box-shadow: 0 32px 64px -36px rgba(7, 19, 33, 0.22);
+}
+
+.inquiryCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.stepBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--teal);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 6px;
+
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+
+  background: var(--faint);
+
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #9fb0ba;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(7, 92, 248, 0.12);
+}
+
+.workTypeBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldLabel {
+  display: block;
+  margin-bottom: 12px;
+
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.workTypeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.workTypeOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 6px;
+
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.workTypeOption:hover {
+  border-color: var(--teal);
+  transform: translateY(-1px);
+}
+
+.workTypeOption .optionIndex {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: color 0.15s ease;
+}
+
+.workTypeOption.isSelected {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
+}
+
+.workTypeOption.isSelected .optionIndex {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* =========================================================
+   FORM FEEDBACK (success / error)
+   ========================================================= */
+
+.formFeedback {
+  margin: -6px 0 0;
+
+  padding: 10px 14px;
+
+  border-radius: 6px;
+  border: 1px solid transparent;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.formFeedback.success {
+  border-color: rgba(103, 163, 242, 0.35);
+  background: rgba(36, 203, 210, 0.08);
+  color: #0a4dc1;
+}
+
+.formFeedback.error {
+  border-color: rgba(220, 38, 38, 0.3);
+  background: rgba(220, 38, 38, 0.06);
+  color: #b91c1c;
+}
+
+.inquiryCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.inquiryCardFooter p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.glowCta {
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.glowCta:hover {
+  box-shadow: 0 12px 28px -8px rgba(7, 92, 248, 0.55);
+  transform: translateY(-1px);
+}
+
+.glowCta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* =========================================================
+   FEATURE STRIP
+   ========================================================= */
+
+.contactFeatures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  padding: 32px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.featureCard {
+  position: relative;
+
+  padding-top: 22px;
+  border-top: 2px solid var(--line);
+}
+
+.featureIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  margin-bottom: 14px;
+
+  border-radius: 50%;
+  background: rgba(36, 203, 210, 0.12);
+
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.featureCard h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.featureCard p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET  (matches global.css breakpoint)
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .contactSection {
+    grid-template-columns: minmax(320px, 400px) 1fr;
+    gap: 40px;
+
+    padding: 48px 0 64px;
+  }
+
+  .contactHeading {
+    font-size: 38px;
+  }
+
+  .inquiryCard {
+    padding: 26px 24px 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE  (matches global.css breakpoint)
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .contactSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    padding: 36px 0 48px;
+  }
+
+  .contactGlow {
+    width: 320px;
+    height: 320px;
+
+    top: -40px;
+    left: -80px;
+  }
+
+  .contactHeading {
+    font-size: 32px;
+  }
+
+  .contactLead,
+  .contactDivider {
+    max-width: none;
+  }
+
+  .fieldRow,
+  .workTypeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiryCardFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inquiryCard {
+    padding: 22px 18px;
+  }
+
+  .contactFeatures {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    padding-top: 24px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE  (matches global.css breakpoint)
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .contactHeading {
+    font-size: 28px;
+  }
+
+  .directContact .directEmail {
+    font-size: 16px;
+  }
+
+  .inquiryCardHeader {
+    font-size: 10px;
+  }
+
+  .workTypeOption {
+    font-size: 12px;
+    padding: 11px 12px;
+  }
+}
