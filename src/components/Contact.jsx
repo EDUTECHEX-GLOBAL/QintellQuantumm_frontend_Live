@@ -138,7 +138,7 @@ export default function Contact() {
             </a>
 
             <p className="directNote">
-              India · Collaborating worldwide
+              Collaboration worldwide
             </p>
           </div>
         </div>

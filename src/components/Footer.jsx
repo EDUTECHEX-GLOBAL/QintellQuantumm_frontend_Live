@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="footerGroup footerPartners">
         <h3>Partnerships</h3>
         <a className="mail" href="mailto: info@qintellquantum.com "> info@qintellquantum.com </a>
-        <p>India · Building for the world</p>
+        <p>Engineering quantum . Enabling the future</p>
         {/* <ArrowButton>Subscribe</ArrowButton> */}
       </div>
       <div className="footerLegal">
